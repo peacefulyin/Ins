@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    {%load static from staticfiles%}
+    <script type="text/javascript" src="{% static 'ins/js/jquery.js'%}"></script>
+	<script type="text/javascript" src="{% static 'ins/js/bootstrap.min.js'%}"></script>
+	<link rel="stylesheet" type="text/css" href="{% static 'ins/css/bootstrap.min.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'ins/css/reset.css'%}">
+</head>
+
+{% block js %}
+{% endblock %}
+
+
+<style>
+    body, button, input, textarea ,a,span{
+	    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+	    font-size: 14px;
+	    line-height: 18px;
+        color: #262626;
+	  	font-weight: 500;
+	}
+
+    a{
+        cursor: pointer;
+    }
+
+    a:hover{
+        text-decoration: none;
+    }
+
+
+	div, footer, header, section{
+		position: relative;
+	}
+
+	* {
+	    -webkit-box-sizing: border-box;
+	    -moz-box-sizing: border-box;
+	    box-sizing: border-box;
+	}
+
+	.avatar{
+		border-radius: 50%;
+	    background-color: #fafafa;
+	    -webkit-box-sizing: border-box;
+	    box-sizing: border-box;
+	    cursor: pointer;
+	    display: block;
+	    -webkit-box-flex: 0;
+	    -webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	    flex: 0 0 auto;
+	    overflow: hidden;
+	    position: relative;
+	}
+
+	.nav{
+	    background-color: #fff;
+	    border-bottom: 1px solid rgba(0,0,0,.0975);
+	    position: fixed;
+	    top: 0;
+	    width: 100%;
+	    z-index: 1;
+	    -webkit-transition: height .2s ease-in-out;
+	    transition: height .2s ease-in-out;
+	    height: 77px;
+	    align-items: center;
+
+	}
+
+	.nav_m{
+	    max-width: 1010px;
+   		padding: 26px 40px;
+   		transition: height .2s ease-in-out;
+    	width: 100%;
+    	height: 77px;
+		margin-left: 480px;
+	}
+
+	.nm_l{
+		background-image: url(https://www.instagram.com/static/bundles/sprite_core.png/8ab5506869d8.png);
+   		background-repeat: no-repeat;
+        background-position: -177px 0;
+	    height: 36px;
+	    width: 176px;
+        margin-right: 185px;
+    	margin-top: -4px;
+    	float: left;
+	}
+
+	.nm_m{
+		flex: 0 1 auto;
+	    min-width: 125px;
+	    width: 215px;
+	    height: 28px;
+	    float: left;
+	}
+
+	.nm_m input{
+	    border: solid 1px #dbdbdb;
+	    border-radius: 3px;
+	    color: #262626;
+	    font-size: 14px;
+	    outline: none;
+	    padding: 3px 10px 3px 26px;
+	    z-index: 2;
+	    position: relative;
+        background-color: rgb(250,250,250);
+	}
+
+	.nm_r{
+		height: 40px;
+		width: 200px;
+		float: right;
+	}
+
+    .nm_r div{
+        float: left;
+    }
+
+	.nm_icons{
+	    background-image: url(https://www.instagram.com/static/bundles/sprite_core.png/8ab5506869d8.png);
+	    background-repeat: no-repeat;
+	    margin-left: 30px;
+
+	}
+
+    .nm_r a{
+        display: inline-block;
+        height: 24px;
+	    width: 24px;
+    }
+
+	.nm_i1{
+		background-position: -310px -352px;
+	}
+
+	.nm_i2{
+	    background-position: -408px 0;
+	}
+
+	.nm_i3{
+	    background-position: -362px -352px;
+	}
+
+</style>
+
+{% block style %}
+{% endblock %}
+<body>
+    <div class="nav">
+		<div class="nav_m">
+			<div class="nm_l"></div>
+			<div class="nm_m">
+				<input type="" name="">
+			</div>
+			<div class="nm_r">
+				<div><a class="nm_icons nm_i1" href=""></a></div>
+				<div><a class="nm_icons nm_i2" href=""></a></div>
+				<div><a class="nm_icons nm_i3" href=""></a></div>
+			</div>
+		</div>
+	</div>
+{% block body %}
+{% endblock %}
+
+</body>
+</html>

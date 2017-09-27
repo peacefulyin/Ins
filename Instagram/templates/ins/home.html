@@ -1,0 +1,228 @@
+{% extends 'ins/base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block style %}
+<style type="text/css">
+	body{
+		background-color: rgb(250,250,250);
+	}
+
+    a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font: inherit;
+        vertical-align: baseline;
+    }
+
+	.main{
+		background-color: white;
+		height: 200px;
+		margin-top: 200px;
+	}
+
+	.main header{
+		margin-bottom: 44px;
+	}
+
+	.h_l{
+	    height: 152px;
+	    width: 152px;
+		display: inline-block;
+		margin-right: 100px;
+		margin-top: 20px;
+		position: relative;
+	}
+
+	.h_l img{
+		border-radius: 50%;
+	}
+
+	.h_r{
+		display: inline-block;
+		height: 160px;
+        position: absolute;
+        top:10px;
+	}
+
+	.hr_t,.hr_m,.hr_b{
+		margin-bottom: 20px;
+	}
+
+
+
+
+
+	.hr_m span{
+		font-size: 16px;
+
+	}
+
+    .hr_m span:nth-child(n+2){
+        margin-left: 40px;
+    }
+
+
+    .hr_t{
+
+    }
+
+	.hr_t h1{
+	    font-size: 32px;
+	    line-height: 40px;
+	    font-weight: 200;
+	    float: left;
+	}
+
+	.v_icon{
+		background-image: url(https://www.instagram.com/static/bundles/sprite_core.png/8ab5506869d8.png);
+	    background-position: -434px -226px;
+	    height: 18px;
+	    width: 18px;
+	    position: relative;
+	    top: 15px;
+	    left: 10px;
+	}
+
+	.a_col{
+	    margin-bottom: 28px;
+	}
+
+	.article{
+		margin-right: 28px;
+		width: 293px;
+		height: 293px;
+		display: inline-block;
+	}
+
+	.article img{
+	    height: 100%;
+	    user-select: none;
+	    width: 100%;
+	}
+
+	.more{
+	    opacity: .7;
+        background: #3897f0;
+	    border-color: #3897f0;
+	    border-radius: 3px;
+	    border-style: solid;
+	    border-width: 1px;
+	    display: block;
+	    font-size: 16px;
+	    font-weight: 600;
+	    line-height: 32px;
+	    margin: 60px 0 0 400px;
+	    overflow: hidden;
+	    padding: 0 48px;
+	    text-align: center;
+	    text-overflow: ellipsis;
+	    white-space: nowrap;
+	    width: 160px;
+	}
+
+	.more a{
+		color: white;
+
+	}
+	.more a:hover{
+		text-decoration: none;
+	}
+
+
+
+</style>
+{% endblock style %}
+
+{% block body %}
+<style>
+    .to_set{
+        line-height: 40px;
+        margin-left: 25px;
+    }
+
+    .to_set button{
+        padding: 0 24px;
+        background: 0 0;
+        border-color: #dbdbdb;
+        color: #262626;
+        -webkit-appearance: none;
+        border-radius: 3px;
+        border-style: solid;
+        border-width: 1px;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 26px;
+        outline: none;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+    }
+
+    h1{
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .set_icon{
+        display: inline-block;
+        margin-left: 2px;
+        background-color: transparent;
+        border: 0;
+        cursor: pointer;
+        padding: 0;
+        background-position: -104px -386px;
+        background-image: url(https://www.instagram.com/static/bundles/sprite_core.png/8ab5506869d8.png);
+        background-repeat: no-repeat;
+        height: 24px;
+        width: 24px;
+    }
+</style>
+
+	<div class="container">
+		<div class="row ">
+			<div class="main col-md-11 col-md-offset-1">
+				<header>
+					<div class="h_l">
+						<img src="https://ig-s-b-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/13584007_989143094533737_1993387861_a.jpg">
+					</div>
+					<div class="h_r">
+						<div class="hr_t">
+							<h1>monkeybaobei</h1>
+							<span class="to_set"><button>编辑个人主页</button></span>
+                            <span class="set_icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						</div>
+						<div class="hr_m">
+							<span>1 帖子</span>
+							<span>1 关注者</span>
+							<span>正在关注 1</span>
+						</div>
+					</div>
+				</header>
+				<div class="a_con">
+					<div class="a_col">
+						<div class="article">
+							<a href="">
+								<img src="https://ig-s-b-a.akamaihd.net/h-ak-igx/t51.2885-15/s640x640/sh0.08/e35/c0.99.913.913/22069767_140330626584117_324215175525695488_n.jpg" alt="">
+							</a>
+						</div>
+						<div class="article">
+							<a href="">
+								<img src="https://ig-s-b-a.akamaihd.net/h-ak-igx/t51.2885-15/s640x640/sh0.08/e35/c0.99.913.913/22069767_140330626584117_324215175525695488_n.jpg" alt="">
+							</a>
+						</div>
+						<div class="article">
+							<a href="">
+								<img src="https://ig-s-b-a.akamaihd.net/h-ak-igx/t51.2885-15/s640x640/sh0.08/e35/c0.99.913.913/22069767_140330626584117_324215175525695488_n.jpg" alt="">
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="more"><a href="">更多</a></div>
+			</div>
+		</div>
+	</div>
+
+{% endblock body %}

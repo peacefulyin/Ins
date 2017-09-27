@@ -1,0 +1,169 @@
+{% extends 'ins/base.html' %}
+
+{% block title %}self{% endblock %}
+
+{% block style %}
+<style type="text/css">
+	body{
+		background-color: rgb(250,250,250);
+	}
+
+
+	.main{
+		background-color: white;
+		height: 200px;
+		margin-top: 200px;
+	}
+
+	.main header{
+		margin-bottom: 44px;
+	}
+
+	.h_l{	
+	    height: 152px;
+	    width: 152px;
+		display: inline-block;
+		margin-right: 100px;
+		margin-top: 20px;
+		position: relative;
+		top: -50px;
+	}
+
+	.h_l img{
+		border-radius: 50%;
+	}
+
+	.h_r{
+		display: inline-block;
+		height: 100%;
+		margin-top: 20px;
+	}
+
+	.hr_t,.hr_m,.hr_b{
+		margin-bottom: 20px;
+	}
+
+	
+	.hr_m{
+		margin-top: 50px;
+	}
+
+	.hr_m span{
+		font-size: 16px;
+	}
+
+
+	.hr_t h1{
+	    font-size: 32px;
+	    line-height: 40px;
+	    font-weight: 200;
+	    float: left;
+	}
+
+	.v_icon{
+		background-image: url(https://www.instagram.com/static/bundles/sprite_core.png/8ab5506869d8.png);
+	    background-position: -434px -226px;
+	    height: 18px;
+	    width: 18px;
+	    position: relative;
+	    top: 15px;
+	    left: 10px;
+	}
+	
+	.a_col{
+	    margin-bottom: 28px;
+	}
+
+	.article{
+		margin-right: 28px;
+		width: 293px;
+		height: 293px;
+		display: inline-block;
+	}
+
+	.article img{
+	    height: 100%;
+	    user-select: none;
+	    width: 100%;
+	}
+	
+	.more{
+	    opacity: .7;
+        background: #3897f0;
+	    border-color: #3897f0;
+	    border-radius: 3px;
+	    border-style: solid;
+	    border-width: 1px;
+	    display: block;
+	    font-size: 16px;
+	    font-weight: 600;
+	    line-height: 32px;
+	    margin: 60px 0 0 400px;
+	    overflow: hidden;
+	    padding: 0 48px;
+	    text-align: center;
+	    text-overflow: ellipsis;
+	    white-space: nowrap;
+	    width: 160px;
+	}
+
+	.more a{
+		color: white;
+
+	}
+	.more a:hover{
+		text-decoration: none;
+	}
+
+</style>
+{% endblock style %}
+
+{% block body %}
+
+	<div class="container">
+		<div class="row ">
+			<div class="main col-md-11 col-md-offset-1">
+				<header>
+					<div class="h_l">
+						<img src="https://ig-s-b-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/13584007_989143094533737_1993387861_a.jpg">
+					</div>
+					<div class="h_r">
+						<div class="hr_t">
+							<h1>kingjames</h1>
+							<span class="v_icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						</div>
+						<div class="hr_m">
+							<span>1,460 帖子</span>
+							<span>32.8百万 关注者</span>
+							<span>正在关注 139</span>
+						</div>
+						<div class="hr_b">
+							<span>LeBron James whereimfrom.com/product-category/savannah-james-collection</span>
+						</div>
+					</div>
+				</header>
+				<div class="a_con">
+					<div class="a_col">
+						<div class="article">
+							<a href="">
+								<img src="https://ig-s-b-a.akamaihd.net/h-ak-igx/t51.2885-15/s640x640/sh0.08/e35/c0.99.913.913/22069767_140330626584117_324215175525695488_n.jpg" alt="">
+							</a>
+						</div>
+						<div class="article">
+							<a href="">
+								<img src="https://ig-s-b-a.akamaihd.net/h-ak-igx/t51.2885-15/s640x640/sh0.08/e35/c0.99.913.913/22069767_140330626584117_324215175525695488_n.jpg" alt="">
+							</a>
+						</div>
+						<div class="article">
+							<a href="">
+								<img src="https://ig-s-b-a.akamaihd.net/h-ak-igx/t51.2885-15/s640x640/sh0.08/e35/c0.99.913.913/22069767_140330626584117_324215175525695488_n.jpg" alt="">
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="more"><a href="">更多</a></div>
+			</div>
+		</div>
+	</div>
+	
+{% endblock body %}
