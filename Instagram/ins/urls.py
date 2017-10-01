@@ -16,5 +16,11 @@ urlpatterns = [
     url(r'account/email_set',views.email_set),
     url(r'account/contact_history',views.contact_history),
     url(r'explore/people',views.explore_people),
+    url(r'explore',views.explore),
+    url(r'quit_login',views.login_quit),
+    url(r'account/signin',views.signin),
+    url(r'account/signup',views.signup),
+
+
 
 ]

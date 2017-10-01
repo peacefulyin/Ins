@@ -2,6 +2,15 @@
 
 {% block title %}Ins{% endblock %}
 
+{% block js %}
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.a_img_con img').error(function(){
+				$(this).attr('src','/static/ins/images/default.jpg')
+        });
+    })
+</script>
+{% endblock js %}
 
 {% block style %}
 <style type="text/css">
@@ -11,7 +20,7 @@
 
 
 	.main{
-		padding-top: 200px;
+		padding-top: 135px;
 		height: 1000px;
 	}
 
@@ -32,7 +41,7 @@
 	    right: 0;
 	    top: 60px;
 	    width: 100%;
-	    margin-top: 200px;	
+	    margin-top: 75px;
 	}
 
 	.article{
@@ -51,6 +60,48 @@
 	    height: 60px;
 	    padding: 16px;
 	}
+
+    .r_stitle{
+        margin-top: 20px;
+    }
+
+    .r_stitle span:nth-child(1){
+        color: #999;
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .r_stitle span:nth-child(2){
+        float: right;
+    }
+
+    .r_self li{
+        cursor: pointer;
+    }
+
+    .r_self li:nth-child(n+2){
+        margin-top: 20px;
+    }
+
+    .r_name{
+        position: relative;
+        top:10px;
+        margin-left: 12px;
+    }
+
+    .r_time span{
+        position: relative;
+        top:15px;
+        font-size: 10px;
+        line-height: 12px;
+        color: #999;
+        margin-left: 12px;
+    }
+
+    .r_right{
+        display: inline-block;
+    }
+
 
 	.h_avat{
 		width: 30px;
@@ -72,8 +123,8 @@
     .a_img_con img{
     	width: 100%;
     }
-	
-	
+
+
 	.a_footer {
 	    padding: 0 16px;
 	}
@@ -171,7 +222,7 @@
 	    padding: 16px 0;
 	    position: relative;
 	}
-	
+
 	.a_pc input{
     	height: 18px;
         background: 0 0;
@@ -183,7 +234,7 @@
 	    resize: none;
 	    max-height: 80px;
 	}
-	
+
 	.pc_more{
 		font-size: 50px;
 		position: absolute;
@@ -319,6 +370,145 @@
         height:28px;
     }
 
+    .main_rightadd{
+        position: fixed;
+        top: 0;
+        right:463px;
+    }
+
+    /* like_com */
+    .l_main{
+        background-color: white;
+        width: 600px;
+        height: 1000px;
+        margin: 135px auto 0;
+        border: 1px solid #efefef;
+        border-radius: 3px;
+        position: absolute;
+    }
+
+    .l_main li{
+        border-bottom: solid 1px #efefef;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding: 8px 16px;
+    }
+
+    .l_img_con img{
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+    }
+
+    .l_user_info{
+        display: inline-block;
+        position: relative;
+        margin-left: 10px;
+        top:8px;
+    }
+
+    .name span{
+        color: #999;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .ver_icon{
+        display: inline-block;
+        margin-left: 8px;
+        background-image: url(https://www.instagram.com/static/bundles/sprite_core.png/8ab5506869d8.png);
+        background-position: -434px -226px;
+        position: relative;
+        top:5px;
+        height: 18px;
+        width: 18px;
+    }
+
+    .like{
+        float: right;
+        background: #3897f0;
+        border-color: #3897f0;
+        color: #fff;
+        -webkit-appearance: none;
+        border-radius: 3px;
+        border-style: solid;
+        border-width: 1px;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 26px;
+        outline: none;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        position: relative;
+        top:15px;
+    }
+
+    .l_main{
+        width:500px;
+        height:360px;
+
+    }
+
+    .l_img_con img{
+        width: 34px;
+        height: 34px;
+    }
+
+    .l_username{
+        position: relative;
+        bottom:7px;
+    }
+
+    .likeyou{
+        margin-left: 10px;
+    }
+
+    .likeimg img{
+        height: 40px;
+        min-width: 40px;
+        vertical-align: middle;
+        float: right;
+    }
+
+    .liketime{
+        color: #999;
+        margin-left: 5px;
+        font-size: 15px;
+        line-height: 18px;
+    }
+
+    .l_triangle{
+        background: #fff;
+        border-left: 1px solid #e6e6e6;
+        border-top: 1px solid #e6e6e6;
+        height: 14px;
+
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        width: 14px;
+        z-index: 1;
+        position: absolute;
+        top:-8px;
+        right:40px;
+
+    }
+
+
+
+
+
 </style>
 {% endblock style %}
 
@@ -329,7 +519,8 @@
 		<div class="row">
 			<div class="main col-md-10 col-md-offset-1">
 				<div class="main_left">
-					<div class="article">
+                    {% for each in page %}
+                    <div class="article">
 						<header>
 							<div>
 								<a class="avatar h_avat" href="">
@@ -338,12 +529,12 @@
 							</div>
 							<div class="h_name" >
 								<a  href="">
-									kitharingtonig
+									{{ each.user.username }}
 								</a>
 							</div>
 						</header>
 						<div class="a_img_con">
-							<img src="https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-15/e35/22070097_119463832037207_9061383703153868800_n.jpg">
+							<img src="/static/ins/article_image/{{ each.shortcode }}.jpg">
 						</div>
 						<div class="a_footer">
 							<div class="af_header">
@@ -390,8 +581,9 @@
 								<span class="pc_more">...</span>
 							</div>
 						</div>
-						
 				    </div>
+                    {% endfor %}
+
 
                     <div class="article recommend">
                         <div class="re_header">
@@ -444,7 +636,7 @@
                                 <a class="mr_name" href="">monkeybaobei</a>
 					        </a>
                         </li>
-                        <li class="r_stitle"><span>快拍</span><span>播放</span></li>
+                        <li class="r_stitle"><span>快拍</span><span>全部播放</span></li>
                         <li>
                             <span><img src="https://ig-s-a-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/19366963_848426331979024_7481644343128752128_a.jpg" alt=""></span>
                             <div class="r_right">
@@ -459,10 +651,29 @@
                                 <div class="r_time"><span >23 小时前</span></div>
                             </div>
                         </li>
+
+                        <li class="r_offcial">
+                            <ul>
+                                <li>关于</li>
+                                <li>我们</li>
+                                <li>支持</li>
+                                <li>博客</li>
+                                <li>新闻</li>
+                                <li>中心</li>
+                                <li>API</li>
+                                <li>隐私</li>
+                                <li>条款</li>
+                                <li>目录</li>
+                                <li>语言</li>
+                            </ul>
+                            <div class="ro_last"><span>© 2017 INSTAGRAM</span></div>
+                        </li>
+
 
                     </ul>
 
 				</div>
+
 				<div class="mr_m" style="display: none;">
 					<div class="quickshot">快拍</div>
 					<div class="quickshot">快拍</div>
@@ -470,54 +681,46 @@
 					<span class="mr_fa">全部播放</span>
 				</div> 
 			</div>
-			
+
 		</div>
 	    </div>
 
     </div>
     <style>
-    .r_stitle{
-        margin-top: 20px;
-    }
+        .r_offcial{
+            position: relative;
+            top:120px;
+            padding-top: 25px;
+            border-top: 1px solid #efefef;
+        }
 
-    .r_stitle span:nth-child(1){
-        color: #999;
-        font-size: 14px;
-        line-height: 18px;
-    }
+        .r_offcial ul{
+            margin-right: 13px;
+            margin-bottom: 3px;
+        }
 
-    .r_stitle span:nth-child(2){
-        float: right;
-    }
+        .r_offcial li{
+            margin-top: 3px !important;
+            display: inline-block;
+            color: #c7c7c7;
+            font-size: 11px;
+            font-weight: 400;
+            line-height: 13px;
+        }
 
-    .r_self li{
-        cursor: pointer;
-    }
+        .ro_last{
+            margin-top: 18px;
+        }
 
-    .r_self li:nth-child(n+2){
-        margin-top: 20px;
-    }
+        .ro_last span{
 
-    .r_name{
-        position: relative;
-        top:10px;
-    }
-
-    .r_time span{
-        position: relative;
-        top:15px;
-        font-size: 10px;
-        line-height: 12px;
-        color: #999;
-    }
-
-    .r_right{
-        display: inline-block;
-    }
-
+            color: #c7c7c7;
+            font-size: 11px;
+        }
 
 
 
 
     </style>
+
 {% endblock body %}

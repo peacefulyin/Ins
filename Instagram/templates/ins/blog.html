@@ -10,9 +10,8 @@
 
 
 	.main{
-		background-color: white;
 		height: 200px;
-		margin-top: 200px;
+		margin-top: 100px;
 	}
 
 	.main header{
@@ -86,6 +85,55 @@
 	    user-select: none;
 	    width: 100%;
 	}
+
+         .ar_bac{
+         position: absolute;
+         left: 0;
+         top: 0;
+         right:0;
+         bottom:0;
+         background-color: rgba(0,0,0,.3);
+         display: flex;
+         align-items:center;
+     }
+
+     .arb{
+         margin: 0 auto;
+     }
+
+    .arb span{
+        color:white;
+        margin-right: 10px;
+        line-height: 19px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+
+
+    .heart{
+        display: inline-block;
+        background-image: url(https://www.instagram.com/static/bundles/sprite_core.png/8ab5506869d8.png);
+        background-repeat: no-repeat;
+        background-position: -434px -184px;
+        height: 19px;
+        width: 19px;
+        position: relative;
+        left: 3px;
+        top:3px;
+    }
+
+     .answer{
+        display: inline-block;
+        background-image: url(https://www.instagram.com/static/bundles/sprite_core.png/8ab5506869d8.png);
+        background-repeat: no-repeat;
+        height: 19px;
+        width: 19px;
+        background-position: -434px -163px;
+        position: relative;
+        left: 3px;
+        top:3px;
+    }
 	
 	.more{
 	    opacity: .7;
@@ -148,6 +196,12 @@
 							<a href="">
 								<img src="https://ig-s-b-a.akamaihd.net/h-ak-igx/t51.2885-15/s640x640/sh0.08/e35/c0.99.913.913/22069767_140330626584117_324215175525695488_n.jpg" alt="">
 							</a>
+                            <div class="ar_bac">
+                                <div class="arb">
+                                    <span class="heart"></span><span>1百万</span>
+                                    <span class="answer"></span><span>11.2千</span>
+                                </div>
+                            </div>
 						</div>
 						<div class="article">
 							<a href="">
@@ -165,5 +219,131 @@
 			</div>
 		</div>
 	</div>
+
+    <div class="a_detail" style="display: none;">
+        <div class="d_con">
+            <img src="https://ig-s-a-a.akamaihd.net/h-ak-igx/t51.2885-15/e35/21879588_1571761972868432_3305010568728936448_n.jpg" alt="">
+            <div class="d_right">
+                <header>
+                    <a href=""><img src="https://ig-s-b-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/13584007_989143094533737_1993387861_a.jpg" alt=""></a>
+                    <a class="dr_name" href="">kingjames</a>
+                    <span class="dr_ver"></span>
+                    <span><button>关注</button></span>
+                </header>
+                <div class="dr_com">
+                    <ul>
+                        <li>
+                            <a class="dr_name" href="">kingjames</a>
+                            <span class="dr_cconent">It's go time! Eye on the prize at all times! #striveforgreatness🚀</span>
+                        </li>
+                        <li>
+                            <a class="dr_name" href="">kingjames</a>
+                            <span class="dr_cconent">It's go time! Eye on the prize at all times! #striveforgreatness🚀</span>
+                        </li>
+                        <li>
+                            <a class="dr_name" href="">kingjames</a>
+                            <span class="dr_cconent">It's go time! Eye on the prize at all times! #striveforgreatness🚀It's go time! Eye on the prize at all times! #striveforgreatness🚀It's go time! Eye on the prize at all times! #striveforgreatness🚀</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .dr_com li{
+            overflow: hidden;
+            padding-bottom: 6px;
+            position: relative;
+            word-wrap: break-word;
+            padding-top: 5px;
+        }
+
+
+    </style>
+
+    <style>
+
+        .a_detail{
+            background-color: rgba(0,0,0,.75);
+            position: fixed;
+            left: 0;
+            top:0;
+            right:0;
+            bottom:0;
+            display: flex;
+            align-items:center;
+
+        }
+
+        .d_con{
+            max-height: 600px;
+            height:600px;
+            margin:0 auto;
+        }
+
+
+        .a_detail img{
+            height:100%;
+        }
+
+        .d_right{
+            background-color: white;
+            height:100%;
+            width:335px;
+            padding: 0 20px;
+            float: right;
+        }
+
+        .d_right header{
+            border-bottom: 1px solid #efefef;
+            height: 78px;
+            margin-right: 0;
+            padding: 20px 0;
+
+            width: 287px;
+        }
+
+        .d_right header img{
+            margin-right: 10px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .dr_name{
+            font-weight: 600;
+        }
+
+        .dr_ver{
+            display: inline-block;
+            height: 12px;
+            width: 12px;
+            background-position: -333px -60px;
+            background-image: url(https://www.instagram.com/static/bundles/sprite_core.png/8ab5506869d8.png);
+            background-repeat: no-repeat;
+        }
+
+        .d_right header button{
+            background: #3897f0;
+            border-color: #3897f0;
+            color: #fff;
+            padding: 0 8px;
+            -webkit-appearance: none;
+            border-radius: 3px;
+            border-style: solid;
+            border-width: 1px;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 26px;
+            outline: none;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            float: right;
+            margin-top: 4px;
+        }
+
+    </style>
 	
 {% endblock body %}

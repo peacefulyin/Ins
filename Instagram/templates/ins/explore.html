@@ -1,0 +1,292 @@
+{% extends 'ins/base.html' %}
+
+{% block title %}self{% endblock %}
+{% block js %}
+    <script type="text/javascript">
+    $(document).ready(function () {
+        $('.article img').error(function(){
+				$(this).attr('src','/static/ins/images/default.jpg')
+        });
+    })
+</script>
+{% endblock %}
+
+{% block style %}
+<style type="text/css">
+	body{
+		background-color: rgb(250,250,250);
+	}
+
+
+	.main{
+		height: 200px;
+		margin-top: 100px;
+	}
+
+	.main header{
+		margin-bottom: 44px;
+	}
+
+	.h_l{
+	    height: 152px;
+	    width: 152px;
+		display: inline-block;
+		margin-right: 100px;
+		margin-top: 20px;
+		position: relative;
+		top: -50px;
+	}
+
+	.h_l img{
+		border-radius: 50%;
+	}
+
+	.h_r{
+		display: inline-block;
+		height: 100%;
+		margin-top: 20px;
+	}
+
+	.hr_t,.hr_m,.hr_b{
+		margin-bottom: 20px;
+	}
+
+
+	.hr_m{
+		margin-top: 50px;
+	}
+
+	.hr_m span{
+		font-size: 16px;
+	}
+
+
+	.hr_t h1{
+	    font-size: 32px;
+	    line-height: 40px;
+	    font-weight: 200;
+	    float: left;
+	}
+
+	.v_icon{
+		background-image: url(https://www.instagram.com/static/bundles/sprite_core.png/8ab5506869d8.png);
+	    background-position: -434px -226px;
+	    height: 18px;
+	    width: 18px;
+	    position: relative;
+	    top: 15px;
+	    left: 10px;
+	}
+
+	.a_col{
+	    margin-bottom: 28px;
+	}
+
+	.article{
+		margin-right: 28px;
+        margin-bottom: 28px;
+		width: 293px;
+		height: 293px;
+		display: inline-block;
+	}
+
+	.article img{
+	    height: 100%;
+	    user-select: none;
+	    width: 100%;
+	}
+
+	.more{
+	    opacity: .7;
+        background: #3897f0;
+	    border-color: #3897f0;
+	    border-radius: 3px;
+	    border-style: solid;
+	    border-width: 1px;
+	    display: block;
+	    font-size: 16px;
+	    font-weight: 600;
+	    line-height: 32px;
+	    margin: 60px 0 0 400px;
+	    overflow: hidden;
+	    padding: 0 48px;
+	    text-align: center;
+	    text-overflow: ellipsis;
+	    white-space: nowrap;
+	    width: 160px;
+	}
+
+	.more a{
+		color: white;
+
+	}
+	.more a:hover{
+		text-decoration: none;
+	}
+
+    .recommend{
+        width: 1000px;
+        height:270px;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+
+    .re_title{
+        color: #999;
+    }
+    .see_all{
+        float: right;
+        color: #3897f0;
+        font-size: 12px;
+        font-weight: 600;
+        margin-right: 75px;
+    }
+
+    .re_slide{
+        width: 200px;
+    }
+
+    .re_slide ul{
+        white-space:nowrap
+    }
+
+    .re_slide li{
+        display: inline-block;
+    }
+
+    .rc_con{
+        margin-right: 30px;
+        width: 290px;
+        height:220px;
+        padding: 20px;
+        flex: 0 0 auto;
+        overflow: hidden;
+        border: 1px solid #e6e6e6;
+        margin-top: 10px;
+
+    }
+
+    .r_img_con{
+        display:flex;
+        justify-content:center;
+        display: -webkit-flex;
+        margin-bottom: 20px;
+    }
+
+    .r_img_con img{
+        width: 78px;
+        height: 78px;
+        border-radius: 50%;
+    }
+
+    .rc_name,.rc_dis{
+        text-align: center;
+        margin-bottom: -10px;
+        margin-top: -10px;
+        overflow: hidden;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .rc_dis span{
+        color: #999;
+    }
+
+    .r_bu_con{
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .rc_con button{
+        padding: 0 8px;
+        background: #3897f0;
+        border-color: #3897f0;
+        color: #fff;
+        -webkit-appearance: none;
+        border-radius: 3px;
+        border-style: solid;
+        border-width: 1px;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 26px;
+        outline: none;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 78px;
+        height:28px;
+    }
+</style>
+{% endblock style %}
+
+{% block body %}
+
+	<div class="container">
+		<div class="row ">
+			<div class="main col-md-11 col-md-offset-1">
+
+                <div class="article recommend">
+                        <div class="re_header">
+                            <span class="re_title">推荐用户</span>
+                            <a href=""><span class="see_all">全部</span></a>
+                        </div>
+                        <div class="re_slide">
+                            <ul>
+                                <li>
+                                    <div class="rc_con">
+                                        <a class="r_img_con" href=""><img src="https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/19764547_317967421987683_1056183598261993472_a.jpg" alt=""></a>
+                                        <div class="rc_name"><span>dul.lubis</span></div>
+                                        <div class="rc_dis"><span>dul...</span></div>
+                                        <div class="r_bu_con">
+                                            <button>关注</button>
+                                        </div>
+                                    </div>
+                                </li>
+                                 <li>
+                                    <div class="rc_con">
+                                        <a class="r_img_con" href=""><img src="https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/19764547_317967421987683_1056183598261993472_a.jpg" alt=""></a>
+                                        <div class="rc_name"><span>dul.lubis</span></div>
+                                        <div class="rc_dis"><span>dul...</span></div>
+                                        <div class="r_bu_con">
+                                            <button>关注</button>
+                                        </div>
+                                    </div>
+                                </li>
+                                 <li>
+                                    <div class="rc_con">
+                                        <a class="r_img_con" href=""><img src="https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/19764547_317967421987683_1056183598261993472_a.jpg" alt=""></a>
+                                        <div class="rc_name"><span>dul.lubis</span></div>
+                                        <div class="rc_dis"><span>dul...</span></div>
+                                        <div class="r_bu_con">
+                                            <button>关注</button>
+                                        </div>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+
+				<div class="a_con">
+					<div class="a_col">
+                        {% for each in page %}
+                        <div class="article">
+							<a href="">
+								<img src="https://ig-s-b-a.akamaihd.net/h-ak-igx/t51.2885-15/s640x640/sh0.08/e35/c0.99.913.913/22069767_140330626584117_324215175525695488_n.jpg" alt="">
+							</a>
+						</div>
+                        {% endfor %}
+
+					</div>
+				</div>
+				<div class="more"><a href="">更多</a></div>
+			</div>
+		</div>
+	</div>
+
+{% endblock body %}

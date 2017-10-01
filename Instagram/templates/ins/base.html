@@ -10,6 +10,35 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'ins/css/reset.css'%}">
 </head>
 
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(window).scroll(function () {
+            var nav = $('.nav');
+            var navi_top = nav.offset().top;
+            console.info(navi_top);
+            if(navi_top>60){
+                nav.addClass('navadd');
+                nav.find('.nm_l').addClass('nm_ladd');
+                $('.main_right').addClass('main_rightadd');
+            }else {
+                $('.nav').removeClass('navadd');
+                function show_navimg() {
+                    $('.nav').find('.nm_l').removeClass('nm_ladd');
+                }
+                $('.main_right').removeClass('main_rightadd');
+
+                setTimeout(show_navimg, 200);
+
+            }
+        });
+
+        $('.nm_i2').click(function () {
+            $('.l_main').fadeToggle();
+            return false
+        })
+    })
+</script>
+
 {% block js %}
 {% endblock %}
 
@@ -91,12 +120,16 @@
     	float: left;
 	}
 
+
+
 	.nm_m{
 		flex: 0 1 auto;
 	    min-width: 125px;
 	    width: 215px;
 	    height: 28px;
 	    float: left;
+        position: absolute;
+        left:35%;
 	}
 
 	.nm_m input{
@@ -146,12 +179,117 @@
 	    background-position: -362px -352px;
 	}
 
+
+    .navadd{
+        height:51px;
+        display: flex;
+        align-items: center;
+        transition: height .2s ease-in-out;
+    }
+
+    .nm_ladd{
+        background-image: url(https://www.instagram.com/static/bundles/sprite_core.png/8ab5506869d8.png);
+   		background-repeat: no-repeat;
+        margin-right: 185px;
+    	margin-top: -4px;
+    	float: left;
+        background-position: -162px -352px;
+        height: 30px;
+        width: 30px;
+        transition: height .5s ease-in-out;
+    }
+
+    /* like com*/
+    .l_main{
+        background-color: white;
+        width: 600px;
+        margin: 135px auto 0;
+        border: 1px solid #efefef;
+        border-radius: 3px;
+        position: absolute;
+        right: 510px;
+        top: -75px;
+    }
+
+    .l_main li{
+        border-bottom: solid 1px #efefef;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding: 8px 16px;
+    }
+
+    .l_img_con img{
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+    }
+
+    .l_user_info{
+        display: inline-block;
+        position: relative;
+        margin-left: 10px;
+        top:8px;
+    }
+
+    .name span{
+        color: #999;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .ver_icon{
+        display: inline-block;
+        margin-left: 8px;
+        background-image: url(https://www.instagram.com/static/bundles/sprite_core.png/8ab5506869d8.png);
+        background-position: -434px -226px;
+        position: relative;
+        top:5px;
+        height: 18px;
+        width: 18px;
+    }
+
+    .like{
+        float: right;
+        background: #3897f0;
+        border-color: #3897f0;
+        color: #fff;
+        -webkit-appearance: none;
+        border-radius: 3px;
+        border-style: solid;
+        border-width: 1px;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 26px;
+        outline: none;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        position: relative;
+        top:15px;
+    }
+
+
+
+
+
+
 </style>
 
 {% block style %}
 {% endblock %}
 <body>
-    <div class="nav">
+    <div class="nav" style="display: ">
 		<div class="nav_m">
 			<div class="nm_l"></div>
 			<div class="nm_m">
@@ -159,11 +297,62 @@
 			</div>
 			<div class="nm_r">
 				<div><a class="nm_icons nm_i1" href=""></a></div>
-				<div><a class="nm_icons nm_i2" href=""></a></div>
+				<div>
+                    <a class="nm_icons nm_i2" href=""></a>
+                </div>
 				<div><a class="nm_icons nm_i3" href=""></a></div>
 			</div>
 		</div>
+
+         <div class="l_main" style="display: none;">
+            <div class="l_triangle">
+
+            </div>
+            <ul>
+                <li>
+                    <div>
+                        <span class="l_img_con"><img src="https://ig-s-a-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/18809370_1911877539033076_2421606538348068864_a.jpg" alt=""></span>
+                        <div class="l_user_info">
+                            <div class="l_username"><span>vanessahudgens</span><span class="ver_icon"></span><span class="likeyou">赞了你的照片</span><span class="liketime">1天</span></div>
+                        </div>
+                        <a class="likeimg" href=""><img src="https://ig-s-c-a.akamaihd.net/h-ak-igx/t51.2885-15/e15/926022_337860253020430_1453222381_n.jpg" alt=""></a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <span class="l_img_con"><img src="https://ig-s-a-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/18809370_1911877539033076_2421606538348068864_a.jpg" alt=""></span>
+                        <div class="l_user_info">
+                            <div class="l_username"><span>vanessahudgens</span><span class="ver_icon"></span><span class="likeyou">赞了你的照片</span><span class="liketime">1天</span></div>
+                        </div>
+                        <a class="likeimg" href=""><img src="https://ig-s-c-a.akamaihd.net/h-ak-igx/t51.2885-15/e15/926022_337860253020430_1453222381_n.jpg" alt=""></a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <span class="l_img_con"><img src="https://ig-s-a-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/18809370_1911877539033076_2421606538348068864_a.jpg" alt=""></span>
+                        <div class="l_user_info">
+                            <div class="l_username"><span>vanessahudgens</span><span class="ver_icon"></span><span class="likeyou">赞了你的照片</span><span class="liketime">1天</span></div>
+                        </div>
+                        <a class="likeimg" href=""><img src="https://ig-s-c-a.akamaihd.net/h-ak-igx/t51.2885-15/e15/926022_337860253020430_1453222381_n.jpg" alt=""></a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <span class="l_img_con"><img src="https://ig-s-a-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/18809370_1911877539033076_2421606538348068864_a.jpg" alt=""></span>
+                        <div class="l_user_info">
+                            <div class="l_username"><span>vanessahudgens</span><span class="ver_icon"></span><span class="likeyou">赞了你的照片</span><span class="liketime">1天</span></div>
+                        </div>
+                        <a class="likeimg" href=""><img src="https://ig-s-c-a.akamaihd.net/h-ak-igx/t51.2885-15/e15/926022_337860253020430_1453222381_n.jpg" alt=""></a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+
 	</div>
+
+
+
 {% block body %}
 {% endblock %}
 

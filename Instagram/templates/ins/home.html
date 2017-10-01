@@ -1,6 +1,39 @@
 {% extends 'ins/base.html' %}
 
 {% block title %}Home{% endblock %}
+{% block js %}
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.set_icon').click(function () {
+            $('.pop_con').show()
+        });
+
+        $('.exit_pop').click(function () {
+            $('.pop_con').hide();
+            return false
+        });
+
+        $('.equit_login').click(function () {
+            $.get('/quit_login',function (dict) {
+                if(dict.hasOwnProperty('true')){
+                    alert('ok')
+                }
+
+
+            });
+            return false
+        })
+
+    });
+
+
+
+
+
+
+</script>
+{% endblock %}
+
 
 {% block style %}
 <style type="text/css">
@@ -224,5 +257,57 @@
 			</div>
 		</div>
 	</div>
+
+    <div class="pop_con" style="display: none">
+        <div class="pop_window">
+            <ul>
+                <li><a href="#">更改密码</a></li>
+                <li><a href="#">已授权应用</a></li>
+                <li><a href="#">通知</a></li>
+                <li><a href="#" class="equit_login">退出</a></li>
+                <li><a href="#" class="exit_pop">取消</a></li>
+            </ul>
+        </div>
+    </div>
+    <style>
+
+        .pop_con{
+            position: fixed;
+            left: 0;
+            right:0;
+            top:0;
+            bottom:0;
+            background-color: rgba(0,0,0,.5);
+            z-index: 999;
+        }
+
+        .pop_window{
+            width: 510px;
+            height:254px;
+            position: absolute;
+            left: 50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+        }
+
+        .pop_window li{
+            width: 100%;
+            padding: 0 16px;
+            height:50px;
+            background-color: #fff;
+            border-bottom: 1px solid #dbdbdb;
+            text-align: center;
+        }
+
+        .pop_window li a{
+            display: inline-block;
+            width: 100%;
+            height:100%;
+            font-size: 16px;
+            line-height: 50px;
+        }
+
+
+    </style>
 
 {% endblock body %}
